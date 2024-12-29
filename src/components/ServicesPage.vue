@@ -2,17 +2,14 @@
 import '../styles/base.css';
 export default {
   name: 'ServicesPage',
-  components: {
-
-  }
 }
 </script>
 
 <template>
-    <h1>Services</h1>
+    <h1>SERVICES</h1>
     <hr class="line">
     <br>
-    <p class="custom-font-size text-right">At <b>Elite Flooring</b>, we pride ourselves on delivering top-quality flooring solutions to elevate your space. With years of experience and a commitment to excellence, we provide a range of flooring services to meet your needs. Whether you’re enhancing your home, upgrading a commercial space, or outfitting a specialized area, we’ve got you covered.</p>
+    <p class="custom-font-size text-right">At <b>Elite Floors</b>, we pride ourselves on delivering top-quality flooring solutions to elevate your space. With years of experience and a commitment to excellence, we provide a range of flooring services to meet your needs. Whether you’re enhancing your home, upgrading a commercial space, or outfitting a specialized area, we’ve got you covered.</p>
     <br>
 
     <div class="services-list fs-5 fw-bold">
@@ -42,9 +39,13 @@ export default {
       <li>And much more...</li>
     </ul>
   </div>
-
 </template>
+
 <style>
+   h1 {
+  font-family: 'CustomFont1', serif;
+
+}
 #ServicesPage {
   background-image: url('@/assets/pic1.jpg');
   background-size: cover;

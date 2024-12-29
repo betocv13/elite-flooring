@@ -1,32 +1,39 @@
 <script>
 import ServicesPage from "./components/ServicesPage.vue";
 import FooterComponent from "./components/FooterComponent.vue";
+import ContactComponent from "./components/ContactComponent.vue";
+
 import './styles/base.css';
 export default {
   name: 'App',
   components: {
     ServicesPage,
-    FooterComponent
+    FooterComponent,
+    ContactComponent
   }
 }
 </script>
 
 <template>
+  <div class="logo-container d-flex justify-content-center align-items-center position-relative bg-white">
+    <img src="@/assets/logo.png" alt="Elite Flooring Logo" class="logo p-1" />
+  </div>
   <section id="app" class="v-100 d-flex justify-content-center align-items-center">
     <div class="intro text-center px-5 py-3 mb-5 ">
- <h1 class="header align-items-center display-3 text-white fs-bold fw-bold ">Elite Flooring</h1>
- <p>Let us elevate your space</p>
+      <div class="logo-container d-flex justify-content-center align-items-center position-relative bg-white">
+    <img src="@/assets/logo.png" alt="Elite Flooring Logo" class="logo-2 p-1" />
+  </div>
+ <p class="mt-2">Let us elevate your space</p>
  <a class="btn">Contact Us</a>
     </div>
-  
 </section>
 
  <section id="servicespage" class="about section p-4">
  <ServicesPage />
  </section>
 
- <section id="contact" class="section bg-primary">
-  <h1>contact</h1>
+ <section id="contact" class="section ">
+  <ContactComponent/>
 </section>
 
 <section id="footer" class="">
@@ -44,7 +51,7 @@ export default {
   background-image: url('@/assets/pic1.jpg');
   background-size: cover;
   background-position: center;
-  height:100vh;
+  height:90vh;
 }
 #servicespage {
   position: relative;
@@ -71,17 +78,35 @@ export default {
   position: relative;
   z-index: 2; /* Ensures content sits above the overlay */
 }
+#contact{
+    background-color: var(--dark-brown);
+    border-top: 2px solid white;
+        border-top: 2px solid white;
+}
 .section{
   height:100vh;
 }
 .intro{
-  background-color: var(--brown-opacity);
+background-color: rgb(255, 255, 255);
   border: 2px solid var(--medium-brown);
   border-radius: 5px;
 
 }
-.about{
+/* Logo Section */
+.logo-container {
 
+height: 10vh;
+}
+
+.logo {
+  width: 250px;
+  height: 70px;
+  object-fit: contain; /* Ensure proper scaling */
+}
+.logo-2 {
+  width: 250px;
+  height: 90px;
+  object-fit: contain; /* Ensure proper scaling */
 }
 .btn{
   background-color: var(--medium-brown);
@@ -90,5 +115,9 @@ export default {
 }
 .btn:hover{
   background-color: var(--dark-brown);
+}
+.header {
+  font-family: 'CustomFont1', serif;
+ color: var(--dark-brown)
 }
 </style>
